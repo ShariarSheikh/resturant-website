@@ -1,9 +1,21 @@
 import NavigationFooter from "@/components/NavigationFooter";
 import Link from "next/link";
-import { FC } from "react";
+import moment from "moment";
+import { FC, useEffect, useState } from "react";
 import bookATableImg from "../../assets/book-a-table.jpg";
 
 const BookATableSection: FC = () => {
+  const [currentTime, setCurrentTime] = useState("");
+  const [currentDate, setCurrentDate] = useState<string>("");
+
+  useEffect(() => {
+    setCurrentDate(moment().format("YYYY-MM-DD"));
+  }, []);
+
+  setInterval(() => {
+    setCurrentTime(moment().format("HH:mm"));
+  }, 1000);
+
   return (
     <section className="w-full flex h-full min-h-screen">
       <div
@@ -27,8 +39,60 @@ const BookATableSection: FC = () => {
         <NavigationFooter />
       </div>
 
-      <div className="w-[50%] flex flex-col items-center h-screen">
-        <h2>hello world</h2>
+      <div className="w-[50%] flex flex-col justify-center h-auto">
+        <div className="max-w-[560px] h-auto mx-auto w-full">
+          <h2 className="text-[40px] font-medium">Book a table</h2>
+          <p className="text-white text-opacity-50 text-[20px] mt-[16px]">
+            Our dining atmosphere is casual and comfortable. To reflect this
+            environment, we maintain a formal dress.
+          </p>
+
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+            }}
+            className="mt-[48px]"
+          >
+            <h3 className="text-white text-opacity-50 text-[16px]">Name</h3>
+            <input
+              type="text"
+              className="h-[60px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
+              placeholder="Name"
+            />
+
+            <h3 className="text-white text-opacity-50 mt-[48px] text-[16px]">
+              Number of guests
+            </h3>
+            <input
+              type="number"
+              min={0}
+              onChange={(event) => {}}
+              className="h-[60px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
+              value={0}
+            />
+            <div className="mt-[48px] flex justify-between">
+              <div className="w-full max-w-[40%]">
+                <h3 className="text-white text-opacity-50 text-[16px]">Date</h3>
+                <input
+                  type="date"
+                  value={currentDate}
+                  className="h-[60px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
+                />
+              </div>
+              <div className="w-full max-w-[40%]">
+                <h3 className="text-white text-opacity-50 text-[16px]">Date</h3>
+                <input
+                  type="time"
+                  value={currentTime}
+                  className="h-[60px] bg-black mt-[16px] w-full px-[24px] py-[15px] border border-[#FFFFFF] border-opacity-50 rounded-[10px]"
+                />
+              </div>
+            </div>
+            <button className="bg-[#F8D49E] active:scale-95 hover:bg-[#f4ca8a] duration-150 mt-[48px] w-full text-black text-[16px] uppercase flex items-center justify-center rounded-[500px] h-[60px]">
+              Book A Table
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
