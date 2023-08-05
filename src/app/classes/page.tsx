@@ -24,7 +24,7 @@ export default function Classes() {
         className="mySwiper h-screen"
       >
         <SwiperSlide className="bg-green-500">Slide 1</SwiperSlide>
-        <SwiperSlide className="bg-red-500">Slide 2</SwiperSlide>
+        <SwiperSlide className="bg-red-500">Slid e 2</SwiperSlide>
         <SwiperSlide className="bg-blue-500">Slide 3</SwiperSlide>
         <SwiperSlide className="bg-white">Slide 4</SwiperSlide>
         <SwiperSlide className="bg-yellow-500">Slide 5</SwiperSlide>
