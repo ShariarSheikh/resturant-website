@@ -2,26 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.slider {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slider 12.5s infinite;
+}
+
+.slider .slide:nth-child(1) {
+  background-image: url("../assets/sliderimg1.png");
+  animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+  background-image: url("../assets/sliderimg2.jpg");
+  animation-delay: -2.5s;
+}
+
+.slider .slide:nth-child(3) {
+  background-image: url("../assets/sliderimg3.jpg");
+  animation-delay: -5s;
+}
+
+.slider .slide:nth-child(4) {
+  background-image: url("../assets/sliderimg4.jpg");
+  animation-delay: -7.5s;
+}
+
+.slider .slide:nth-child(5) {
+  background-image: url("../assets/sliderimg5.jpg");
+  animation-delay: -10s;
+}
+
+@keyframes slider {
+  0%,
+  16%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  20% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  96% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
 }
