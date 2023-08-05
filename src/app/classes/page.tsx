@@ -1,26 +1,34 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import React from "react";
-
-// import required modules
+import React, { useEffect, useRef } from "react";
 import { Pagination } from "swiper/modules";
 
 export default function Classes() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    // Start the autoplay when the component mounts
+    swiperRef.current?.swiper?.autoplay?.start();
+  }, []);
+
   return (
     <main className="min-h-screen relative overflow-hidden">
       <Swiper
         loop
-        autoplay
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         slidesPerView={3}
         spaceBetween={0}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
+        ref={swiperRef}
         className="mySwiper h-screen"
       >
         <SwiperSlide className="bg-green-500">Slide 1</SwiperSlide>
