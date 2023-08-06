@@ -1,7 +1,6 @@
 import React from "react";
 import menuData from "./menuData";
 import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const Feed = () => {
@@ -13,8 +12,12 @@ const Feed = () => {
         </h1>
         {menuData.starters.map((item) => (
           <div
+            style={{
+              border: item.id === 3 ? `1px solid #FACE8D` : "1px solid black",
+              borderRadius: 10,
+            }}
             key={item.id}
-            className="flex w-full mt-[12px] pt-[32px] cursor-pointer hover:scale-95 duration-150"
+            className="flex w-full mt-[16px] cursor-pointer hover:scale-95 duration-150"
           >
             <Image
               width={90}
@@ -23,10 +26,10 @@ const Feed = () => {
               alt={item.name}
               className="rounded-[10px]"
             />
-            <div className="ml-[24px]">
-              <div className="flex items-center justify-between">
+            <div className="w-full ml-[24px] pr-[20px]">
+              <div className="w-full flex items-center justify-between">
                 <h1 className="text-[20px]">{item.name}</h1>
-                <p className="text-white text-opacity-90">$29</p>
+                <p className="text-white text-opacity-90">{item.price}</p>
               </div>
               <p className="text-[16px] text-white text-opacity-50">
                 {item.description}
@@ -42,8 +45,13 @@ const Feed = () => {
         </h1>
         {menuData.breakfast.map((item) => (
           <div
+            style={{
+              border:
+                item.id === 2 ? `1px solid #FACE8D` : "1px solid transparent",
+              borderRadius: 10,
+            }}
             key={item.id}
-            className="flex w-full mt-[12px] pt-[32px] cursor-pointer hover:scale-95 duration-150"
+            className="flex w-full mt-[12px] cursor-pointer hover:scale-95 duration-150"
           >
             <Image
               width={90}
@@ -55,7 +63,7 @@ const Feed = () => {
             <div className="ml-[24px]">
               <div className="flex items-center justify-between">
                 <h1 className="text-[20px]">{item.name}</h1>
-                <p className="text-white text-opacity-90">$29</p>
+                <p className="text-white text-opacity-90">{item.price}</p>
               </div>
               <p className="text-[16px] text-white text-opacity-50">
                 {item.description}
@@ -71,8 +79,13 @@ const Feed = () => {
         </h1>
         {menuData.dinner.map((item) => (
           <div
+            style={{
+              border:
+                item.id === 4 ? `1px solid #FACE8D` : "1px solid transparent",
+              borderRadius: 10,
+            }}
             key={item.id}
-            className="flex w-full mt-[12px] pt-[32px] cursor-pointer hover:scale-95 duration-150"
+            className="flex w-full mt-[12px] cursor-pointer hover:scale-95 duration-150"
           >
             <Image
               width={90}
@@ -84,7 +97,7 @@ const Feed = () => {
             <div className="ml-[24px]">
               <div className="flex items-center justify-between">
                 <h1 className="text-[20px]">{item.name}</h1>
-                <p className="text-white text-opacity-90">$29</p>
+                <p className="text-white text-opacity-90">{item.price}</p>
               </div>
               <p className="text-[16px] text-white text-opacity-50">
                 {item.description}
@@ -101,7 +114,7 @@ const Feed = () => {
         {menuData.drinks.map((item) => (
           <div
             key={item.id}
-            className="flex w-full mt-[12px] pt-[32px] cursor-pointer hover:scale-95 duration-150"
+            className="flex w-full mt-[12px] cursor-pointer hover:scale-95 duration-150"
           >
             <Image
               width={90}
@@ -113,7 +126,7 @@ const Feed = () => {
             <div className="ml-[24px]">
               <div className="flex items-center justify-between">
                 <h1 className="text-[20px]">{item.name}</h1>
-                <p className="text-white text-opacity-90">$29</p>
+                <p className="text-white text-opacity-90">{item.price}</p>
               </div>
               <p className="text-[16px] text-white text-opacity-50">
                 {item.description}
