@@ -76,3 +76,22 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #ccc;
 }
+
+.dark-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Adjust the last value to control transparency */
+}
+
+.swiper-pagination-bullet-active {
+  background: wheat !important;
+}
