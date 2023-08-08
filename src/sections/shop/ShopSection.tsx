@@ -1,7 +1,6 @@
 import NavigationFooter from "@/components/NavigationFooter";
 import Link from "next/link";
 import { FC } from "react";
-import menuImg from "../../assets/menupage.jpg";
 import data from "./data";
 import Image from "next/image";
 import Footer from "@/components/Footer";
@@ -11,7 +10,7 @@ const ShopSection: FC = () => {
     <section className="w-full flex h-full min-h-screen overflow-hidden">
       <div
         style={{
-          background: `url(${menuImg.src})`,
+          background: `url(https://images.unsplash.com/photo-1526361547623-9dd08c979bb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80)`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
