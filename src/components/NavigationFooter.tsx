@@ -62,14 +62,39 @@ const NavigationFooter: React.FC = () => {
       >
         <div
           style={{
-            top: isMenu ? "-240px" : "15px",
             left: isMenu ? "3%" : "14px",
-            height: isMenu ? "240px" : "0px",
             width: isMenu ? "96%" : "0px",
           }}
-          className="absolute bg-white text-black shadow-md duration-200 rounded-[10px] overflow-hidden"
+          className={`
+          ${isMenu ? "h-[384px] md:h-[240px]" : "h-0"}
+          ${isMenu ? "-top-[384px] md:-top-[240px]" : "top-[15px]"}
+          absolute bg-white text-black shadow-md duration-200 rounded-[10px] overflow-hidden`}
         >
           <ul>
+            <li className="mb-[16px] block md:hidden">
+              <Link href="/menu">
+                <div className="text-[32px] hover:text-gray-600 h-[48px] px-[10px] border-b border-transparent hover:border-gray-300">
+                  Menu
+                </div>
+              </Link>
+            </li>
+
+            <li className="mb-[16px] block md:hidden">
+              <Link href="/restaurant">
+                <div className="text-[32px] hover:text-gray-600 h-[48px] px-[10px] border-b border-transparent hover:border-gray-300">
+                  Restaurant
+                </div>
+              </Link>
+            </li>
+
+            <li className="mb-[16px] block md:hidden">
+              <Link href="/classes">
+                <div className="text-[32px] hover:text-gray-600 h-[48px] px-[10px] border-b border-transparent hover:border-gray-300">
+                  Classes
+                </div>
+              </Link>
+            </li>
+
             <li className="mb-[16px]">
               <Link href="/shop">
                 <div className="text-[32px] hover:text-gray-600 h-[48px] px-[10px] border-b border-transparent hover:border-gray-300">
