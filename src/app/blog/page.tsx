@@ -4,7 +4,7 @@ import NavigationFooter from "@/components/NavigationFooter";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import blogData from "../utils/blogData";
+import blogData from "../../utils/blogData";
 
 export default function Blog() {
   return (
