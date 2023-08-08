@@ -129,7 +129,7 @@ export default function Classes() {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="w-full max-w-[520px] min-h-screen flex flex-col justify-between items-center fixed left-[1%] py-10 z-10">
+      <div className="w-full max-w-[520px] min-h-screen flex flex-col justify-between items-center fixed bottom-[30px] left-[1%] py-10 z-10">
         <Link href="/" className="font-semibold cursor-pointer">
           Hukka Bukka
         </Link>
