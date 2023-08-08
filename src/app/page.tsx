@@ -11,27 +11,27 @@ export default function Home() {
         <title>Restaurant Hukka Bukka</title>
       </Head>
 
-      <main className="min-h-screen relative overflow-hidden">
-        <section className="!fixed inset-0 min-h-screen w-full bg-transparent flex flex-col items-center justify-between p-12 z-[20]">
+      <main className="min-h-screen relative overflow-hidden w-full">
+        <section className="!fixed inset-0 min-h-screen w-full bg-transparent flex flex-col items-center justify-between p-8 md:p-12 z-[20]">
           <Link href="/" className="font-semibold cursor-pointer">
             Hukka Bukka
           </Link>
 
           <div className="flex flex-col items-center">
-            <h2 className="text-[#FACE8D] font-dancing text-[80px] leading-none">
+            <h2 className="text-[#FACE8D] font-dancing text-2xl md:text-[80px] leading-none">
               The pure taste of
             </h2>
-            <h1 className="font-medium text-[160px] leading-none">
+            <h1 className="font-medium text-5xl md:text-[160px] leading-none">
               Bangladesh
             </h1>
-            <p className="text-[23px] mt-[20px] max-w-[600px]">
+            <p className="text-xl md:text-[23px] text-center md:text-start mt-[20px] md:max-w-[600px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore.
             </p>
 
             <div className="w-full flex-col justify-center max-w-[650px]">
               <div className="mt-[23px] max-w-[650px] w-full flex justify-end">
-                <div className="bg-white w-[250px] h-[163px] rounded-[10px] text-black py-4 px-6">
+                <div className="bg-white w-[250px] h-[163px] rounded-[10px] text-black py-4 px-6 hidden md:block">
                   <h3 className="font-normal tracking-wide">Opening Hours</h3>
                   <div className="mt-2 flex justify-between items-center">
                     <h2 className="">Mon</h2>

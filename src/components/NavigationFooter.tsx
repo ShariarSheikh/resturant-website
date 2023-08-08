@@ -9,7 +9,7 @@ const NavigationFooter: React.FC = () => {
   return (
     <div className="w-full max-w-[520px] h-[68px] relative">
       <div className="w-full max-w-[520px] h-[68px] rounded-[100px] bg-white mt-[22px] text-black">
-        <ul className="w-full h-full flex items-center p-[10px]">
+        <ul className="w-full h-full flex items-center justify-between md:justify-normal p-[10px]">
           <li>
             <button
               onClick={() => setIsMenu(true)}
@@ -20,7 +20,7 @@ const NavigationFooter: React.FC = () => {
               </span>
             </button>
           </li>
-          <li>
+          <li className="hidden md:block">
             <Link
               href="menu"
               className="h-[48px] cursor-pointer rounded-[100px] flex items-center justify-center p-[16px] ml-[14px] bg-gray-100"
@@ -28,7 +28,7 @@ const NavigationFooter: React.FC = () => {
               Menu
             </Link>
           </li>
-          <li>
+          <li className="hidden md:block">
             <Link
               href="restaurant"
               className="h-[48px] cursor-pointer rounded-[100px] flex items-center justify-center p-[16px] ml-[14px] hover:bg-gray-100"
@@ -36,7 +36,7 @@ const NavigationFooter: React.FC = () => {
               Restaurant
             </Link>
           </li>
-          <li>
+          <li className="hidden md:block">
             <Link
               href="classes"
               className="h-[48px] cursor-pointer rounded-[100px] flex items-center justify-center p-[16px] ml-[14px] hover:bg-gray-100"
@@ -44,7 +44,7 @@ const NavigationFooter: React.FC = () => {
               Classes
             </Link>
           </li>
-          <li>
+          <li className="">
             <Link
               href="book-a-table"
               className="h-[48px] font-medium text-[14px] cursor-pointer rounded-[100px] flex items-center justify-center p-[16px] ml-[14px] text-white bg-black uppercase"
