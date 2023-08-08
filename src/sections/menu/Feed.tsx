@@ -7,7 +7,7 @@ const Feed = () => {
   return (
     <div className="mt-[80px] max-w-[628px] w-full overflow-hidden overflow-y-scroll">
       <div className="w-full px-[10px]">
-        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none">
+        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Starters
         </h1>
         {menuData.starters.map((item) => (
@@ -40,7 +40,7 @@ const Feed = () => {
       </div>
 
       <div className="w-full px-[10px] mt-[96px]">
-        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none">
+        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Breakfast
         </h1>
         {menuData.breakfast.map((item) => (
@@ -74,7 +74,7 @@ const Feed = () => {
       </div>
 
       <div className="w-full px-[10px] mt-[96px]">
-        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none">
+        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Dinner
         </h1>
         {menuData.dinner.map((item) => (
@@ -108,7 +108,7 @@ const Feed = () => {
       </div>
 
       <div className="w-full px-[10px] mt-[96px]">
-        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none">
+        <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Drinks
         </h1>
         {menuData.drinks.map((item) => (
