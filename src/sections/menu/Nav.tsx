@@ -1,16 +1,46 @@
-import React from "react";
+import React, { FC } from "react";
 
-const Nav = () => {
+//-------------------------------------------------------
+interface IProps {
+  startersRef: HTMLDivElement;
+  breakfastRef: HTMLDivElement;
+  dinnerRef: HTMLDivElement;
+  drinksRef: HTMLDivElement;
+  navigationHandler: (ref: HTMLDivElement) => void;
+}
+//-------------------------------------------------------
+
+const Nav: FC<IProps> = ({
+  navigationHandler,
+  startersRef,
+  breakfastRef,
+  dinnerRef,
+  drinksRef,
+}) => {
   return (
     <div className="min-h-[74px] w-full flex justify-center items-center">
-      <button className="font-light text-[#FACE8D]">Starters</button>
-      <button className="font-light hover:text-[#FACE8D] text-white ml-[48px]">
-        Lunch
+      <button
+        onClick={() => navigationHandler(startersRef)}
+        className="font-light text-[#FACE8D]"
+      >
+        Starters
       </button>
-      <button className="font-light hover:text-[#FACE8D] text-white ml-[48px]">
+      <button
+        onClick={() => navigationHandler(breakfastRef)}
+        className="font-light hover:text-[#FACE8D] text-white ml-[28px] md:ml-[48px]"
+      >
+        Breakfast
+      </button>
+      <button
+        onClick={() => navigationHandler(dinnerRef)}
+        className="font-light hover:text-[#FACE8D] text-white ml-[28px] md:ml-[48px]"
+      >
         Dinner
       </button>
-      <button className="font-light hover:text-[#FACE8D] text-white ml-[48px]">
+      <button
+        onClick={() => navigationHandler(drinksRef)}
+        className="font-light hover:text-[#FACE8D] text-white ml-[28px] md:ml-[48px]"
+      >
         Drinks
       </button>
     </div>

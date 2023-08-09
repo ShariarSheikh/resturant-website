@@ -1,12 +1,26 @@
-import React from "react";
+import React, { FC } from "react";
 import menuData from "./menuData";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 
-const Feed = () => {
+//---------------------------------------------
+interface IProps {
+  startersRef: HTMLDivElement;
+  breakfastRef: HTMLDivElement;
+  dinnerRef: HTMLDivElement;
+  drinksRef: HTMLDivElement;
+}
+//---------------------------------------------
+
+const Feed: FC<IProps> = ({
+  startersRef,
+  breakfastRef,
+  dinnerRef,
+  drinksRef,
+}) => {
   return (
     <div className="mt-[80px] max-w-[628px] w-full overflow-hidden overflow-y-scroll">
-      <div className="w-full px-[10px]">
+      <div ref={startersRef} className="w-full px-[10px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Starters
         </h1>
@@ -39,7 +53,7 @@ const Feed = () => {
         ))}
       </div>
 
-      <div className="w-full px-[10px] mt-[96px]">
+      <div ref={breakfastRef} className="w-full px-[10px] mt-[96px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Breakfast
         </h1>
@@ -73,7 +87,7 @@ const Feed = () => {
         ))}
       </div>
 
-      <div className="w-full px-[10px] mt-[96px]">
+      <div ref={dinnerRef} className="w-full px-[10px] mt-[96px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Dinner
         </h1>
@@ -107,7 +121,7 @@ const Feed = () => {
         ))}
       </div>
 
-      <div className="w-full px-[10px] mt-[96px]">
+      <div ref={drinksRef} className="w-full px-[10px] mt-[96px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Drinks
         </h1>

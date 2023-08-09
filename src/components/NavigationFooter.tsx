@@ -23,7 +23,7 @@ const NavigationFooter: React.FC = () => {
           <li className="hidden sm:block">
             <Link
               href="menu"
-              className="h-[48px] cursor-pointer rounded-[100px] flex items-center justify-center p-[16px] ml-[14px] bg-gray-100"
+              className="h-[48px] cursor-pointer rounded-[100px] flex items-center justify-center p-[16px] ml-[14px] hover:bg-gray-100"
             >
               Menu
             </Link>
