@@ -16,8 +16,6 @@ export default function Classes() {
   const mobileRow = width <= 540 ? 1 : 2;
   const row = width > 768 ? 3 : mobileRow;
 
-  console.log(width);
-
   return (
     <>
       <Head>
