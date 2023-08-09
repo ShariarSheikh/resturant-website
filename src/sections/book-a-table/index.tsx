@@ -17,14 +17,14 @@ const BookATableSection: FC = () => {
   }, 1000);
 
   return (
-    <section className="w-full flex h-full min-h-screen">
+    <section className="w-full flex flex-col lg:flex-row h-full min-h-screen">
       <div
         style={{
           background: `url(${bookATableImg.src})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="w-[50%] p-12 flex flex-col justify-between items-center min-h-screen h-full"
+        className="w-full lg:w-[50%] p-12 flex flex-col justify-between items-center min-h-screen h-full"
       >
         <Link href="/" className="font-semibold cursor-pointer">
           Hukka Bukka
@@ -39,7 +39,7 @@ const BookATableSection: FC = () => {
         <NavigationFooter />
       </div>
 
-      <div className="w-[50%] flex flex-col justify-center h-auto">
+      <div className="w-full lg:w-[50%] flex flex-col justify-center h-auto lg:px-0 px-4 lg:py-0 py-6">
         <div className="max-w-[560px] h-auto mx-auto w-full">
           <h2 className="text-[40px] font-medium">Book a table</h2>
           <p className="text-white text-opacity-50 text-[20px] mt-[16px]">
