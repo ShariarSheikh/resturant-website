@@ -19,7 +19,7 @@ const MenuSection: FC = () => {
   }
 
   return (
-    <section className="w-full flex flex-col h-full min-h-screen">
+    <section className="w-full flex flex-col lg:flex-row h-full min-h-screen">
       <div
         style={{
           background: `url(${menuImg.src})`,
