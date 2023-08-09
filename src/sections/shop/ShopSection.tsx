@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 const ShopSection: FC = () => {
   return (
-    <section className="w-full flex h-full min-h-screen overflow-hidden">
+    <section className="w-full flex flex-col lg:flex-row h-full min-h-screen overflow-hidden">
       <div
         style={{
           background: `url(https://images.unsplash.com/photo-1526361547623-9dd08c979bb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80)`,
@@ -15,7 +15,7 @@ const ShopSection: FC = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
-        className="w-[50%] p-12 flex flex-col justify-between items-center min-h-screen h-full"
+        className="w-full lg:w-[50%] p-12 flex flex-col justify-between items-center min-h-screen h-full"
       >
         <Link href="/" className="font-semibold cursor-pointer">
           Hukka Bukka
@@ -30,14 +30,14 @@ const ShopSection: FC = () => {
         <NavigationFooter />
       </div>
 
-      <div className="w-[50%] pt-[96px] h-screen overflow-hidden overflow-y-scroll">
-        <div className="w-full flex flex-col items-center">
+      <div className="w-full lg:w-[50%] pt-[96px] h-screen overflow-hidden overflow-y-scroll">
+        <div className="w-full flex flex-col items-center px-4">
           {data.map((value) => (
             <div
               key={value.id}
-              className="h-[220px] w-full max-w-[680px] flex mb-[48px] cursor-pointer border border-transparent hover:border-stone-400 rounded-[10px] py-[6px]"
+              className="h-[220px] w-full max-w-[680px] min-h-[464px] lg:min-h-[100%] flex flex-col lg:flex-row mb-[48px] cursor-pointer border border-transparent hover:border-stone-400 rounded-[10px] py-[6px]"
             >
-              <div className="min-w-[280px] h-[210px] relative flex justify-center items-center">
+              <div className="lg:min-w-[280px] min-h-[210px] lg:h-[210px] relative flex justify-center items-center">
                 <Image
                   src={`https://images.unsplash.com/photo-1469234496837-d0101f54be3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1218&q=80`}
                   alt="card"
