@@ -3,13 +3,19 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Pagination } from "swiper/modules";
 import NavigationFooter from "@/components/NavigationFooter";
 import Link from "next/link";
 import Head from "next/head";
+import useWindow from "@/hooks/useWindow";
 
 export default function Classes() {
+  const { width } = useWindow();
+
+  const mobileRow = width <= 540 ? 1 : 2;
+  const row = width > 768 ? 3 : mobileRow;
+
   return (
     <>
       <Head>
@@ -22,7 +28,7 @@ export default function Classes() {
           autoplay={{
             delay: 1000,
           }}
-          slidesPerView={3}
+          slidesPerView={row}
           spaceBetween={0}
           pagination={{
             clickable: true,
@@ -39,7 +45,7 @@ export default function Classes() {
                 backgroundSize: "cover",
               }}
             />
-            <div className="fixed inset-0 flex flex-col items-center justify-center h-full min-h-screen">
+            <div className="fixed inset-0 flex flex-col items-center justify-center text-center h-full min-h-screen">
               <h1 className="text-[#FACE8D] font-dancing text-[64px]">Asian</h1>
               <h3 className="text-[40px]">Delicious Breakfast</h3>
               <p className="text-[13px] text-white text-opacity-50">
