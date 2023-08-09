@@ -1,14 +1,14 @@
-import React, { FC } from "react";
+import React, { FC, MutableRefObject } from "react";
 import menuData from "./menuData";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 
 //---------------------------------------------
 interface IProps {
-  startersRef: HTMLDivElement;
-  breakfastRef: HTMLDivElement;
-  dinnerRef: HTMLDivElement;
-  drinksRef: HTMLDivElement;
+  startersRef: MutableRefObject<HTMLDivElement | null>;
+  breakfastRef: MutableRefObject<HTMLDivElement | null>;
+  dinnerRef: MutableRefObject<HTMLDivElement | null>;
+  drinksRef: MutableRefObject<HTMLDivElement | null>;
 }
 //---------------------------------------------
 
@@ -52,7 +52,6 @@ const Feed: FC<IProps> = ({
           </div>
         ))}
       </div>
-
       <div ref={breakfastRef} className="w-full px-[10px] mt-[96px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Breakfast
@@ -86,7 +85,6 @@ const Feed: FC<IProps> = ({
           </div>
         ))}
       </div>
-
       <div ref={dinnerRef} className="w-full px-[10px] mt-[96px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Dinner
@@ -120,7 +118,6 @@ const Feed: FC<IProps> = ({
           </div>
         ))}
       </div>
-
       <div ref={drinksRef} className="w-full px-[10px] mt-[96px]">
         <h1 className="text-[#FACE8D] font-dancing text-[64px] leading-none mb-[32px]">
           Drinks

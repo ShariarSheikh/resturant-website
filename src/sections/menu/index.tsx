@@ -1,6 +1,6 @@
 import NavigationFooter from "@/components/NavigationFooter";
 import Link from "next/link";
-import { FC, useRef, useState } from "react";
+import { FC, MutableRefObject, useRef, useState } from "react";
 import Nav from "./Nav";
 import menuImg from "../../assets/menupage.jpg";
 import Feed from "./Feed";
@@ -11,11 +11,13 @@ const MenuSection: FC = () => {
   const dinnerRef = useRef<HTMLDivElement | null>(null);
   const drinksRef = useRef<HTMLDivElement | null>(null);
 
-  function scrollToSection(sectionId: HTMLDivElement) {
-    sectionId?.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  function scrollToSection(sectionId: MutableRefObject<HTMLDivElement | null>) {
+    if (sectionId?.current) {
+      sectionId?.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   }
 
   return (
