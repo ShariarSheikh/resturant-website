@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.ibb.co/vLNJ62z/Untitled-design.png" height="320" width="640" title="Project Picture">
+</p>
+
 🌟 Inspiring Website Demo: Empower Your Creativity 🌟
 
 Explore a captivating online showcase that merges innovation with aesthetics – welcome to my dynamic 10-page demo website!
